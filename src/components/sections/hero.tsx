@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight, FileDown } from "lucide-react";
 import { profile } from "@/content/profile";
 
 const container = {
@@ -94,6 +94,29 @@ export function Hero() {
                 className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent/40 hover:text-accent"
               >
                 Contact Me
+              </a>
+            </motion.div>
+
+            {/* CV Downloads */}
+            <motion.div
+              variants={item}
+              className="mb-5 flex items-center justify-center gap-3 md:justify-start"
+            >
+              <FileDown className="h-3.5 w-3.5 text-muted" />
+              <span className="text-xs text-muted">Download CV:</span>
+              <a
+                href="/Juan_Carlos_Calvo_Gonzalez_CV_ATS_English.pdf"
+                download
+                className="rounded-md border border-border px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-accent/40 hover:text-accent"
+              >
+                English
+              </a>
+              <a
+                href="/Juan_Carlos_Calvo_Gonzalez_CV_ATS_Espanol.pdf"
+                download
+                className="rounded-md border border-border px-3 py-1 text-xs font-medium text-muted-foreground transition-colors hover:border-accent/40 hover:text-accent"
+              >
+                Español
               </a>
             </motion.div>
 
